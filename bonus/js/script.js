@@ -54,7 +54,6 @@ const btnDownElement = document.getElementById("down-arrow");
 const imgElement = document.getElementById("main-img");
 const arrThumbnails = document.querySelectorAll(".thumbnail");
 
-console.log(arrThumbnails)
 
 let i = 1;
 
@@ -76,9 +75,6 @@ btnDownElement.addEventListener('click', function(){
     
         arrThumbnails[n].classList.remove("opacity");
         arrThumbnails[k].classList.add("opacity");
-        console.log(i,k,n)
-
-    
 
 })
 
@@ -93,14 +89,9 @@ btnUpElement.addEventListener('click', function(){
         n=4;
         k=0
     }
-    if (i==5){
-        k=0
-    }
     imgElement.src = `img/0${i}.webp`;
 
     arrThumbnails[n].classList.toggle("opacity");
     arrThumbnails[k].classList.add("opacity");
-    console.log(i,n)
-    
 
 })
